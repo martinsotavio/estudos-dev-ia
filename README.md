@@ -6,9 +6,7 @@ Minha trilha de estudos rumo à **computação de alto desempenho (HPC)**: do te
 
 Em 27/10/2026 assisti à palestra de **Guilherme Friol** na Semana Acadêmica da Info da UPF (Universidade de Passo Fundo). Ele é CEO da Vircos Technology e especialista em HPC, virtualização e sistemas de alta carga. A palestra me mostrou a área, a demanda por bons profissionais e me fez querer seguir esse caminho.
 
-## O plano
-
-78 semanas, 4 dias por semana, 1 hora por dia, com Alura e material gratuito. Detalhes em [`PLANO.md`](PLANO.md); progresso sessão a sessão em [`DIARIO.md`](DIARIO.md).
+## Fases
 
 | Fase | Tema | Status |
 | --- | --- | --- |
@@ -21,5 +19,3 @@ Em 27/10/2026 assisti à palestra de **Guilherme Friol** na Semana Acadêmica da
 | 6 | HPC para IA | ⚪ |
 
 **Fio condutor:** uma multiplicação de matrizes reescrita a cada fase (C → C++ → OpenMP → MPI → CUDA → PyTorch), com os tempos comparados no fim.
-
-**Regra:** a IA é professora, não atalho. Ela escreve, eu meço.
