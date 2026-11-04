@@ -22,7 +22,7 @@ Ambiente: Fedora 44. Diferenças do curso (se ele usar Ubuntu) ficam marcadas co
 - **Minha resposta:** o Linux pode ser melhorado e compartilhado com todos, mas não pode ser vendido como sistema fechado. ✅
 - **Software livre:** dá 4 liberdades: usar, estudar o código, modificar e redistribuir.
 - **GPL (copyleft):** quem distribui uma versão modificada tem que liberar o código dela sob a mesma GPL. Ninguém pode "fechar" o Linux.
-- **Detalhe:** a GPL permite **vender**. A Red Hat cobra pelo RHEL (o suporte e o serviço), mas é obrigada a entregar o código-fonte. Livre de liberdade, não de preço.
+- **Detalhe:** a GPL permite **vender**. A Red Hat cobra pelo RHEL (o suporte e o serviço), mas é obrigada a entregar o código-fonte a quem recebe o sistema (e quem recebe pode redistribuí-lo). Livre de liberdade, não de preço.
 
 ### História
 
