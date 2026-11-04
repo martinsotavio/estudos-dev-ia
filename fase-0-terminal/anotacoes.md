@@ -17,7 +17,12 @@ Ambiente: Fedora 44. Diferenças do curso (se ele usar Ubuntu) ficam marcadas co
 - O processo de inicialização do Linux, incluindo BIOS, GRUB e INIT.
 - As interfaces gráficas comuns no Linux e o uso do terminal.
 
-**Pendente:** explicar com minhas palavras o que é software livre e a licença GPL.
+### Software livre e GPL
+
+- **Minha resposta:** o Linux pode ser melhorado e compartilhado com todos, mas não pode ser vendido como sistema fechado. ✅
+- **Software livre:** dá 4 liberdades: usar, estudar o código, modificar e redistribuir.
+- **GPL (copyleft):** quem distribui uma versão modificada tem que liberar o código dela sob a mesma GPL. Ninguém pode "fechar" o Linux.
+- **Detalhe:** a GPL permite **vender**. A Red Hat cobra pelo RHEL (o suporte e o serviço), mas é obrigada a entregar o código-fonte. Livre de liberdade, não de preço.
 
 ### História
 
@@ -59,6 +64,8 @@ INIT ───────── primeiro processo (PID 1); sobe os serviços e 
 
 - Erro que cometi: pus o INIT primeiro. O INIT é o **último**, porque é um programa e precisa do kernel já rodando.
 - Truque para lembrar: cada etapa carrega a próxima (BIOS acha o GRUB, GRUB carrega o kernel, kernel inicia o INIT).
+- **GRUB corrompido → o kernel não carrega.** O kernel está no disco, mas quem o coloca na memória é o GRUB. A corrente para na BIOS ("no bootable device" ou erro do GRUB). Os arquivos continuam intactos; basta consertar o GRUB (ex.: boot por pendrive).
+- **Diagnóstico pela tela:** menu do GRUB aparece e trava logo após escolher → **kernel**. Começa a subir serviços e trava no meio → **INIT** (systemd). Mesmo raciocínio de debug: descartar etapas pela ordem até achar onde quebrou.
 
 ### Interfaces
 
@@ -68,7 +75,11 @@ INIT ───────── primeiro processo (PID 1); sobe os serviços e 
 | Vantagem | Fácil, visual | Leve, rápida, dá para automatizar com scripts e usar remoto (SSH) |
 | Desvantagem | Gasta CPU e memória | Curva de aprendizado; precisa saber os comandos |
 
-- **Em HPC:** clusters não têm interface gráfica. Acesso só por terminal via SSH, porque cada pedaço de CPU e memória vai para os cálculos.
+- **Em HPC:** clusters não têm interface gráfica, por 3 motivos:
+    1. **Desperdício:** GUI gasta CPU, memória e GPU só para desenhar janelas; no cluster tudo vai para os cálculos.
+    2. **Ninguém senta na frente:** os servidores ficam em racks, sem monitor. Acesso remoto por **SSH**, que só passa texto.
+    3. **Automação:** rodar em 100 máquinas é script + Slurm (Fase 4), não clique.
+- Em uma frase: GUI é para uma pessoa olhar a tela; cluster é para calcular.
 - **Meu ambiente de estudo:** Fedora com GUI, mas faço tudo no terminal para treinar como num cluster.
 
 ### Onde o Linux roda
