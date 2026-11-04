@@ -4,7 +4,7 @@ Minha trilha de estudos rumo à **computação de alto desempenho (HPC)**: do te
 
 ## Por que comecei
 
-Em 27/10/2026 assisti à palestra de **Guilherme Friol** na Semana Acadêmica da Info da UPF (Universidade de Passo Fundo). Ele é CEO da Vircos Technology e especialista em HPC, virtualização e sistemas de alta carga. A palestra me mostrou a área, a demanda por bons profissionais e me fez querer seguir esse caminho.
+Em 27/10/2026 assisti à palestra de **Guilherme Friol** na XI Semana Acadêmica do DAINFO (Diretório Acadêmico de Informática) da UPF, Universidade de Passo Fundo. Ele é CEO da Vircos Technology e especialista em HPC, virtualização e sistemas de alta carga. A palestra me mostrou a área, a demanda por bons profissionais e me fez querer seguir esse caminho.
 
 ## Fases
 
