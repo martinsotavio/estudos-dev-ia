@@ -59,6 +59,8 @@ hpc-estudos/
 ├── CLAUDE.md
 ├── PLANO.md
 ├── DIARIO.md
+├── README.md
+├── contexto/          um arquivo por dia de estudo (AAAA-MM-DD-diaNN.md)
 ├── fase-0-terminal/
 ├── fase-1-c/
 └── matmul/
@@ -66,12 +68,18 @@ hpc-estudos/
 
 ## Ritual de cada sessão
 
-**Ao começar:** leia as últimas linhas do `DIARIO.md` e me diga, em 2 linhas, onde parei e qual o próximo passo no `PLANO.md`. Depois pergunte o que vou fazer hoje: aula nova, prática ou mini-projeto.
+**Ao começar:** leia o arquivo mais recente de `contexto/` e as últimas linhas do `DIARIO.md`. Comece pelos "Pontos fracos para revisar" (1 pergunta rápida). Depois me diga, em 2 linhas, onde parei e qual o próximo passo no `PLANO.md`. Depois pergunte o que vou fazer hoje: aula nova, prática ou mini-projeto.
 
-**Ao terminar:** me ajude a escrever uma linha no `DIARIO.md`, neste formato:
+**Ao terminar** (quando eu avisar que vou sair):
+
+1. **Revise tudo do dia:** os commits (`git log`, `git diff`), as anotações e as respostas que dei. Procure informação errada que subiu, conceito que anotei errado e pergunta que respondi errado e passou sem correção. Corrija e me diga o que achou.
+2. **Gere o contexto do dia** em `contexto/AAAA-MM-DD-diaNN.md`, no formato do `contexto/2026-11-04-dia01.md`: resumo, o que foi feito, perguntas e respostas (certas e erradas, com a correção), pontos fracos, pendências e próxima sessão. É um resumo estruturado, não a conversa inteira.
+3. **Escreva a linha do `DIARIO.md`**, neste formato:
 
 ```
 2026-11-05 · F0 S1 · fiz: aula 1 de Linux, comandos ls/cd/pwd · dúvida: caminho absoluto vs relativo
 ```
+
+4. **Commit e push** de tudo.
 
 Quando uma fase estiver terminando, confira comigo o critério "Pronto pra avançar quando" dela no `PLANO.md` antes de eu mudar de fase.
