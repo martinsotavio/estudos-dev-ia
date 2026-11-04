@@ -77,7 +77,7 @@ Antes de começar: se usa Windows, instale o WSL com Ubuntu. Assim você tem um 
 
 **Na Alura**
 
-- [ ] [Fundamentos do Sistema Operacional Linux](https://www.alura.com.br/conteudo/linux-operacoes-fundamentos-comandos)
+- [ ] [Sistema Operacional Linux: fundamentos e administração prática](https://www.alura.com.br/curso-online-linux-operacoes-fundamentos-comandos)
 - [ ] [Git e GitHub: controle e compartilhe seu código](https://www.alura.com.br/curso-online-git-github-controle-de-versao)
 
 **Por fora**
