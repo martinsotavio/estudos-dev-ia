@@ -4,7 +4,20 @@ Curso: [Sistema Operacional Linux: fundamentos e administração prática](https
 
 Ambiente: Fedora 44. Diferenças do curso (se ele usar Ubuntu) ficam marcadas com **Fedora:**.
 
-## Aula 1 · Fundamentos: história, distribuições, boot e interfaces
+## Aula 1 · Fundamentos: história, distribuições, boot e interfaces ✅ concluída em 2026-11-04
+
+**Resumo da aula (Alura):**
+
+- A origem e evolução do Linux e seu modelo de desenvolvimento colaborativo.
+- O conceito de software livre e a licença GPL.
+- O papel das comunidades de desenvolvedores na evolução do Linux.
+- A utilização da linha de comando no Linux.
+- As diferentes distribuições de Linux e suas características.
+- A aplicação do Linux em diversas áreas e dispositivos.
+- O processo de inicialização do Linux, incluindo BIOS, GRUB e INIT.
+- As interfaces gráficas comuns no Linux e o uso do terminal.
+
+**Pendente:** explicar com minhas palavras o que é software livre e a licença GPL.
 
 ### História
 
