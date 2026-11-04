@@ -1,45 +1,25 @@
 # hpc-estudos
 
-Minha trilha de estudos rumo à **computação de alto desempenho (HPC)**: do terminal Linux ao treino distribuído de modelos de IA em GPUs. Quem sabe me tornar um engenheiro de HPC algum dia.
+Minha trilha de estudos rumo à **computação de alto desempenho (HPC)**: do terminal Linux ao treino distribuído de IA em GPUs. Quem sabe me tornar um engenheiro de HPC algum dia.
 
-Sou desenvolvedor e uso IA no dia a dia. Comecei sem base em C, sistemas ou paralelismo. Este repositório registra cada passo, inclusive os erros.
+## Por que comecei
+
+Em 27/10/2026 assisti à palestra de **Guilherme Friol** na Semana Acadêmica da Info da UPF (Universidade de Passo Fundo). Ele é CEO da Vircos Technology e especialista em HPC, virtualização e sistemas de alta carga. A palestra me mostrou a área, a demanda por bons profissionais e me fez querer seguir esse caminho.
 
 ## O plano
 
-78 semanas, 4 dias por semana, 1 hora por dia. Cursos da Alura somados a material gratuito (MIT Missing Semester, CS50, OpenMP com Tim Mattson, HPC Carpentry, NVIDIA DLI, GPU MODE). O plano completo está em [`PLANO.md`](PLANO.md).
+78 semanas, 4 dias por semana, 1 hora por dia, com Alura e material gratuito. Detalhes em [`PLANO.md`](PLANO.md); progresso sessão a sessão em [`DIARIO.md`](DIARIO.md).
 
-| Fase | Tema | Semanas | Status |
-| --- | --- | --- | --- |
-| 0 | Terminal, Linux e Git | 1–6 | 🟡 em andamento |
-| 1 | Linguagem C e como o computador funciona | 7–18 | ⚪ |
-| 2 | C++ e performance (cache, tiling) | 19–30 | ⚪ |
-| 3 | Paralelismo em CPU com OpenMP | 31–40 | ⚪ |
-| 4 | Clusters com MPI e Slurm | 41–52 | ⚪ |
-| 5 | GPU, CUDA e a base de IA | 53–66 | ⚪ |
-| 6 | HPC para IA: treino distribuído | 67–78 | ⚪ |
+| Fase | Tema | Status |
+| --- | --- | --- |
+| 0 | Terminal, Linux e Git | 🟡 em andamento |
+| 1 | Linguagem C | ⚪ |
+| 2 | C++ e performance | ⚪ |
+| 3 | OpenMP | ⚪ |
+| 4 | MPI e Slurm | ⚪ |
+| 5 | GPU e CUDA | ⚪ |
+| 6 | HPC para IA | ⚪ |
 
-## O fio condutor: `matmul/`
+**Fio condutor:** uma multiplicação de matrizes reescrita a cada fase (C → C++ → OpenMP → MPI → CUDA → PyTorch), com os tempos comparados no fim.
 
-Uma multiplicação de matrizes 1000 × 1000 que começa em C puro e é reescrita a cada fase: C++ otimizado, OpenMP, MPI, CUDA e PyTorch. Cada versão fica na sua pasta, sem ser alterada depois, e todos os tempos vão para um CSV. No fim, um gráfico compara tudo.
-
-Treinar um modelo de IA é, no fundo, multiplicar matrizes gigantes. Por isso o mesmo problema atravessa o plano inteiro.
-
-## IA como ferramenta, não como atalho
-
-Estudo com o Claude Code no papel de professor: ele dá dicas e revisa o que eu fiz, mas não entrega a solução dos exercícios. A regra é **a IA escreve, eu meço**: performance só vale com número, medido por benchmark ou profiler.
-
-## Estrutura
-
-```
-hpc-estudos/
-├── PLANO.md            plano completo, fase a fase
-├── DIARIO.md           uma linha por sessão de estudo
-├── CLAUDE.md           regras para a IA durante o estudo
-└── fase-0-terminal/    anotações e exercícios da fase atual
-```
-
-As pastas crescem com as fases.
-
-## Ambiente
-
-Fedora 44 · AMD Ryzen 7 5825U (8 núcleos, 16 threads) · 7 GiB de RAM. Não tenho GPU NVIDIA: a parte de CUDA vai rodar no Google Colab.
+**Regra:** a IA é professora, não atalho. Ela escreve, eu meço.
