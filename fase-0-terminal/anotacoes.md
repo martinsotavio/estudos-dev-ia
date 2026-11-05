@@ -88,3 +88,10 @@ INIT ───────── primeiro processo (PID 1); sobe os serviços e 
 - Multimídia de carro, smart TVs, roteadores, micro-ondas e outros dispositivos embarcados (embedded)
 - Servidores e nuvem
 - **Todos os 500 supercomputadores do TOP500** rodam Linux
+
+## Aula 2 · Comandos e navegação 🟡 em andamento (começou em 2026-11-05)
+
+Comandos vistos até agora estão em [`comandos.md`](comandos.md): `man`, `pwd`, `ls`, `find`, `cp`, `mv`, `rm`, `touch`.
+
+- `find` em pastas do sistema (`/var`) mostra `Permission denied`: o usuário comum não tem permissão de **ler** algumas pastas, nem só pra listar.
+- `mv` serve pra mover **e** pra renomear. `rm` não usa lixeira.
