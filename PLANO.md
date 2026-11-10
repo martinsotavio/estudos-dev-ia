@@ -107,6 +107,117 @@ A IA vem primeiro porque é o que mais quero, mas as fases A e B podem andar jun
 
 **Na última semana da Fase 0:** reler esta tabela, confirmar a ordem e atualizar o `CLAUDE.md` (fase atual).
 
+**Calendário de referência** (4 h por semana; referência, não prazo): Fase 0 até a semana 6 · A: semanas 7–18 · B: 19–28 · C: 29–36 · D: 37–42 · E: 43–48. Cerca de 11 meses, dentro da assinatura da Alura. **Prioridade: Alura primeiro**, os recursos de fora completam.
+
+## Fase A · IA aplicada (semanas 7 a 18)
+
+Objetivo: entender como um LLM é chamado por código, dar ferramentas a ele, buscar contexto (RAG) e, principalmente, **medir se ele acerta**.
+
+**Na Alura** (carreira [Engenharia de Agentes de IA](https://www.alura.com.br/carreiras/engenharia-de-ia))
+
+- [ ] ~~Pensamento computacional~~: pule, você já programa.
+- [ ] [Python: Inteligência Artificial Aplicada](https://www.alura.com.br/curso-online-python-ia-aplicada) (12 h), do nível Base: Python, pandas e APIs de IA.
+- [ ] Nível 1 · Construção de Agentes Inteligentes com RAG: **lista de cursos a preencher** (a página pública não mostra; abrir logado e colar aqui).
+- [ ] [Checkpoint Engenharia de IA · Nível 1](https://www.alura.com.br/curso-online-checkpoint-engenharia-ia-nivel1) (2 h), para fechar o nível.
+
+**Por fora** (grátis)
+
+- [ ] [Building with the Claude API](https://anthropic.skilljar.com/claude-with-the-anthropic-api), da Anthropic Academy: API, prompts, tool use, RAG e avaliação de prompts. É o curso mais alinhado com o `tutor/`.
+- [ ] [Introduction to Model Context Protocol](https://anthropic.skilljar.com/introduction-to-model-context-protocol): como expor uma ferramenta sua para um agente. Avançado, depois: [MCP: Advanced Topics](https://anthropic.skilljar.com/model-context-protocol-advanced-topics).
+- [ ] Leitura: [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) (Anthropic): quando usar um workflow simples e quando usar um agente.
+- [ ] Prática de prompt: [Prompt engineering interactive tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial) (notebooks da Anthropic).
+- [ ] Avaliação: [Your AI Product Needs Evals](https://hamel.dev/blog/posts/evals/) (Hamel Husain), a melhor introdução prática a evals.
+
+Os cursos da Alura usam OpenAI e Gemini; os de fora usam Claude. Os conceitos são os mesmos, e comparar dois provedores é bom exercício.
+
+**Mini-projeto:** `tutor/` v1: script em Python que chama um LLM, tem uma ferramenta (`ler_contexto`), faz RAG sobre `contexto/` e roda 20 perguntas com resposta esperada, gravando o acerto em `tutor/resultados.csv`. Tag `fase-a`.
+
+**Pronto pra avançar quando:** você explica o que é tool use e RAG, e mostra com número que uma mudança de prompt melhorou (ou piorou) o acerto.
+
+## Fase B · TypeScript e Node.js (semanas 19 a 28)
+
+Objetivo: escrever uma API tipada em Node, a base de quase todo produto web com IA.
+
+**Na Alura** (ver a [página de cursos de Node.js](https://www.alura.com.br/cursos-online-programacao/node-js))
+
+- [ ] Se JavaScript ainda não é do dia a dia: um curso de JavaScript base antes (a Alura recomenda essa ordem).
+- [ ] Typescript: construção de uma API com tipagem segura (8 h).
+- [ ] [TypeScript: desenvolvendo validações e tratando erros](https://www.alura.com.br/curso-online-typescript-desenvolvendo-validacoes-tratando-erros), a continuação do anterior.
+- [ ] Opcional, depois: formação [Boas práticas em Node.js com TypeScript](https://www.alura.com.br/formacao-boas-praticas-node-js-typescript) (SOLID, refatoração, padrões).
+
+**Por fora**
+
+- [ ] [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html), a documentação oficial, como consulta.
+- [ ] [Node.js Learn](https://nodejs.org/en/learn), guias oficiais.
+
+**Mini-projeto:** `tutor/` v2: a mesma lógica exposta como API em TypeScript (rota para perguntar e rota para rodar a avaliação). Tag `fase-b`.
+
+**Pronto pra avançar quando:** você escreve uma API pequena tipada sem consultar o básico e lê um erro do compilador sem pedir ajuda.
+
+## Fase C · SQL e PostgreSQL (semanas 29 a 36)
+
+Objetivo: modelar dados e consultar bem. Em produto com IA, o banco guarda histórico, usuários e até os vetores do RAG.
+
+**Na Alura** (formação [SQL com PostgreSQL](https://www.alura.com.br/formacao-postgresql), 6 cursos; faça os primeiros)
+
+- [ ] [PostgreSQL: primeiros passos com SQL](https://www.alura.com.br/curso-online-introducao-postgresql-primeiros-passos) (8 h): tabelas, SELECT, INSERT, UPDATE, DELETE, JOIN.
+- [ ] [PostgreSQL: views, sub-consultas e funções](https://www.alura.com.br/curso-online-postgresql-views-sub-consultas-funcoes).
+- [ ] O resto da formação só se sobrar tempo. A formação de administração (DBA) não é o foco.
+
+**Por fora**
+
+- [ ] [PostgreSQL Exercises](https://pgexercises.com/): exercícios no navegador, ótimos para o Dia 3 (prática).
+- [ ] [pgvector](https://github.com/pgvector/pgvector): extensão para guardar vetores no Postgres. Liga a Fase C ao RAG da Fase A.
+
+**Mini-projeto:** `tutor/` v3: Postgres guardando perguntas, respostas e o resultado de cada avaliação. Tag `fase-c`.
+
+**Pronto pra avançar quando:** você modela três tabelas, escreve os joins e explica uma política de acesso.
+
+## Fase D · DevOps enxuto: Docker e GitHub Actions (semanas 37 a 42)
+
+Objetivo: pôr no ar o que você construiu e automatizar a verificação.
+
+**Na Alura** (ver os [cursos de DevOps](https://www.alura.com.br/cursos-online-devops))
+
+- [ ] Um curso de Docker básico, se ainda não usa Docker no trabalho.
+- [ ] [Integração Contínua: Pipeline Docker no GitHub Actions](https://www.alura.com.br/curso-online-integracao-continua-pipeline-docker-github-actions) (8 h): build de imagem, testes no Actions, Secrets.
+- [ ] Opcional: [Docker: construindo imagens para produção](https://cursos.alura.com.br/course/docker-construindo-imagens-producao) (8 h): multi-stage build e imagens menores.
+
+**Por fora**
+
+- [ ] [Docker: Get started](https://docs.docker.com/get-started/), documentação oficial.
+- [ ] [GitHub Actions: Quickstart](https://docs.github.com/en/actions/quickstart).
+
+**Fedora:** o Fedora vem com Podman, que aceita quase todos os comandos do Docker. Decidir na hora qual usar.
+
+**Mini-projeto:** `tutor/` v4: API e Postgres em containers (compose), e um workflow que roda a avaliação a cada push. Tag `fase-d`.
+
+**Pronto pra avançar quando:** você sobe a API num container e o CI roda sozinho a cada push.
+
+## Fase E · Testes automatizados (semanas 43 a 48)
+
+Objetivo: código, e código gerado por IA principalmente, só vale verificado.
+
+**Na Alura**
+
+- [ ] [Testes com TypeScript: refatoração, TDD e boas práticas](https://www.alura.com.br/curso-online-testes-typescript-refatoracao-tdd-boas-praticas) (8 h).
+- [ ] [Node.js: testes unitários e de integração](https://www.alura.com.br/curso-online-nodejs-testes-unitarios-integracao) (12 h): Jest e Supertest.
+
+**Por fora**
+
+- [ ] [Vitest: guia](https://vitest.dev/guide/), alternativa moderna ao Jest, com a mesma ideia.
+
+**Mini-projeto:** `tutor/` v5: testes da API e a avaliação como teste de regressão (o acerto caiu abaixo do mínimo, o CI quebra). Tag `fase-e`. Fechar o README com a evolução do acerto, do custo e da latência de cada versão.
+
+**Pronto quando:** a API tem testes que falham quando você quebra algo, e você explica a diferença entre um teste e uma avaliação de LLM.
+
+## Comunidade e o que vem depois
+
+- **Discord da Alura** e as comunidades das carreiras (a AI-Native tem grupo no WhatsApp).
+- **Mais Anthropic Academy** quando fizer sentido: [Introduction to agent skills](https://anthropic.skilljar.com/introduction-to-agent-skills) e [Introduction to subagents](https://anthropic.skilljar.com/introduction-to-subagents).
+- **Da AI-Native Software Engineering:** os cursos de engenharia de contexto (Nível 2), quando o `tutor/` crescer.
+- **Revisão a cada 3 meses:** releia este plano, marque o que fez e ajuste o ritmo.
+
 ---
 
 # Trilha HPC (em espera)
