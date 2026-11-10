@@ -1,21 +1,24 @@
-# hpc-estudos
+# estudos-dev-ia
 
-Minha trilha de estudos rumo à **computação de alto desempenho (HPC)**: do terminal Linux ao treino distribuído de IA em GPUs. Quem sabe me tornar um engenheiro de HPC algum dia.
+Minha trilha de estudos rumo a ser dos melhores em **desenvolvimento com IA**: IA aplicada no centro, com full stack e um DevOps enxuto em volta. Usando IA como ferramenta, e sabendo verificar o que ela produz.
 
 ## Por que comecei
 
-Em 27/10/2026 assisti à palestra de **Guilherme Friol** na XI Semana Acadêmica do DAINFO (Diretório Acadêmico de Informática) da UPF, Universidade de Passo Fundo. Engenheiro de HPC, ele é CEO da [Vircos Tecnologia](https://www.vircos.com.br/), referência em cloud HPC e IA como serviço no Brasil, e fundador da [FRIOL.AI](https://friol.ai/). A palestra me mostrou a área, a demanda por bons profissionais e me fez querer seguir esse caminho.
+Em 27/10/2026 assisti à palestra de **Guilherme Friol** na XI Semana Acadêmica do DAINFO (Diretório Acadêmico de Informática) da UPF, Universidade de Passo Fundo. Engenheiro de HPC, ele é CEO da [Vircos Tecnologia](https://www.vircos.com.br/), referência em cloud HPC e IA como serviço no Brasil, e fundador da [FRIOL.AI](https://friol.ai/). A palestra me fez voltar a estudar, e o plano começou mirando computação de alto desempenho (HPC).
+
+## Mudança de rumo (10/11/2026)
+
+Repensando a carreira, e não só o emprego, decidi focar na área em que já estudo e trabalho todo dia: desenvolvimento com IA. A base de terminal, Linux e Git (Fase 0) serve aos dois caminhos e continua. A trilha de HPC fica em espera, guardada no `PLANO.md`.
 
 ## Fases
 
 | Fase | Tema | Status |
 | --- | --- | --- |
 | 0 | Terminal, Linux e Git | 🟡 em andamento |
-| 1 | Linguagem C | ⚪ |
-| 2 | C++ e performance | ⚪ |
-| 3 | OpenMP | ⚪ |
-| 4 | MPI e Slurm | ⚪ |
-| 5 | GPU e CUDA | ⚪ |
-| 6 | HPC para IA | ⚪ |
+| A | IA aplicada: API de LLM, ferramentas, agentes, RAG, avaliação | ⚪ |
+| B | TypeScript e Node.js | ⚪ |
+| C | SQL e PostgreSQL | ⚪ |
+| D | Docker e GitHub Actions | ⚪ |
+| E | Testes automatizados | ⚪ |
 
-**Fio condutor:** uma multiplicação de matrizes reescrita a cada fase (C → C++ → OpenMP → MPI → CUDA → PyTorch), com os tempos comparados no fim.
+**Fio condutor:** o `tutor/`, um agente que estuda este próprio repositório e me faz perguntas sobre meus pontos fracos. Ele cresce a cada fase (agente com RAG → API em TypeScript → Postgres → Docker e CI → testes), e o acerto dele é medido em cada versão.

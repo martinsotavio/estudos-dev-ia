@@ -1,12 +1,12 @@
-# Plano de estudos: HPC do zero
+# Plano de estudos: desenvolvimento com IA
 
 Nov 4, 2026 · Otávio
 
-> Fonte: https://claude.ai/artifact/1N443HmrDA4NNLbB2d1Wzj (exportado em 2026-11-04)
+> Fonte original (trilha HPC): https://claude.ai/artifact/1N443HmrDA4NNLbB2d1Wzj (exportado em 2026-11-04). Rumo revisto em 10/11/2026: Fase 0 → Fases A a E. A trilha HPC (Fases 1 a 6) está no fim, em espera.
 
 ## Como usar este plano
 
-São 78 semanas (cerca de 18 meses), 4 dias por semana, 1 hora por dia: cabe no 1 ano e meio de Alura que você ainda tem. A ordem importa mais que a velocidade, porque cada fase usa o que a anterior ensinou.
+4 dias por semana, 1 hora por dia, dentro do 1 ano e meio de Alura que você ainda tem. A ordem importa mais que a velocidade, porque cada fase usa o que a anterior ensinou. As semanas de cada fase A a E são definidas quando a Fase 0 fechar.
 
 **Sua semana padrão** (escolha 4 dias fixos e um horário fixo, ex.: seg, ter, qui e sáb às 20h)
 
@@ -31,49 +31,46 @@ São 78 semanas (cerca de 18 meses), 4 dias por semana, 1 hora por dia: cabe no 
 
 ## IA dentro do plano
 
-Você vai aprender IA de dois jeitos, sem precisar de horas extras: como **ferramenta** em toda fase (você já usa Claude Code) e como **carga de trabalho**, que é o que mais roda nos clusters hoje (fases 5 e 6). O engenheiro de HPC que vale ouro nessa era é o que manda a IA escrever e consegue provar, com números, se o resultado está certo e rápido.
+A IA entra de dois jeitos: como **ferramenta** em toda fase (você já usa Claude Code todo dia) e como **o assunto principal** da carreira, a partir da Fase A. O dev que vale ouro nessa era é o que manda a IA fazer e consegue provar, com teste e número, se o resultado está certo.
 
-**A regra: a IA escreve, você mede.** Código paralelo gerado por IA costuma compilar e rodar, mas pode esconder uma condição de corrida ou ser mais lento que o original. Só o benchmark e o profiler dizem a verdade, e é essa base que as fases constroem.
+**A regra: a IA escreve, você verifica.** Código gerado por IA costuma compilar e rodar, mas pode esconder um bug, uma brecha de segurança ou uma resposta inventada. Só o teste, a medição e a leitura atenta dizem a verdade, e é essa base que as fases constroem.
 
 **Como usar a IA em cada fase**
 
 | Fase | Deixe a IA fazer | Faça você mesmo |
 | --- | --- | --- |
 | 0 · Terminal | Explicar comandos e mensagens de erro | Digitar os comandos |
-| 1 · C | Revisar seu código e explicar o bug, depois que você tentou achar | Escrever o código e caçar o primeiro bug de memória |
-| 2 · C++ | Sugerir otimizações pra comparar com as suas | Medir antes e depois de cada mudança |
-| 3 · OpenMP | Gerar scripts de benchmark e gráficos de speedup | A paralelização em si |
-| 4 · MPI e Slurm | Gerar scripts Slurm, Dockerfiles e automação | Entender cada linha do script de job |
-| 5 · GPU | Escrever variações de kernel CUDA | Perfilar e explicar por que uma é mais rápida |
-| 6 · HPC para IA | Automatizar experimentos de treino em escala | Desenhar o experimento e validar o resultado |
+| A · IA aplicada | Explicar conceitos e sugerir variações de prompt para comparar | Montar o agente e medir se ele acerta (avaliação) |
+| B · TypeScript e Node | Revisar seu código e explicar o erro, depois que você tentou | Escrever o código e ler a mensagem do compilador |
+| C · SQL e Postgres | Explicar o plano da consulta e sugerir índices | Modelar as tabelas e escrever as consultas |
+| D · Docker e Actions | Gerar Dockerfile e workflow, explicando cada linha | Entender cada linha e fazer rodar |
+| E · Testes | Sugerir casos de borda que você esqueceu | Escrever os testes e ver cada um falhar antes de passar |
 
-Nas fases 0 a 2, peça ao Claude para agir como professor: "me dê uma dica, não a resposta". Tira a dúvida sem tirar o aprendizado.
+Na Fase 0 e no começo de cada fase nova, peça ao Claude para agir como professor: "me dê uma dica, não a resposta". Tira a dúvida sem tirar o aprendizado.
 
 **Para usar o Claude Code como engenheiro, não como passageiro**
 
 - [ ] [Claude Code in Action](https://www.datacamp.com/pt/courses/claude-code-in-action), curso gratuito de cerca de 3 h: conduzir sessões longas, criar regras com hooks e verificar o que volta. Faça no lugar da semana 6.
 
-**E a sua trilha de IA na Alura?** As carreiras que você já segue (Arquitetura de Soluções com IA, Engenharia de IA) continuam valendo, e a Alura também tem a carreira AI Native Software Engineering, que conversa com seu jeito de trabalhar. Mas com 4 h por semana, levar as duas trilhas inteiras em paralelo dobra o prazo de ambas. Por isso aqui o HPC é a trilha principal e os cursos de IA da Alura entram nas fases 5 e 6. Se quiser manter a carreira de IA andando desde já, acrescente um 5º dia só pra ela.
+**A trilha de IA na Alura.** As carreiras que você já segue (Arquitetura de Soluções com IA, Engenharia de IA) e a AI Native Software Engineering, que conversa com seu jeito de trabalhar, viram a **trilha principal** a partir da Fase A. Com 4 h por semana não dá para levar as três inteiras em paralelo: na Fase A, escolha com o agente deste repositório uma carreira para seguir e use os cursos das outras só onde completarem algo que falta. As Fases B a E podem sair de cursos dessas mesmas carreiras ou de cursos avulsos.
 
 ## Visão geral
 
-| Fase | Tema | Semanas |
+| Fase | Tema | Status |
 | --- | --- | --- |
-| 0 | Terminal, Linux e Git | 1–6 |
-| 1 | Linguagem C e como o computador funciona | 7–18 |
-| 2 | C++ e performance | 19–30 |
-| 3 | Paralelismo em CPU com OpenMP | 31–40 |
-| 4 | Clusters com MPI e Slurm | 41–52 |
-| 5 | GPU, CUDA e a base de IA | 53–66 |
-| 6 | HPC para IA, dados e portfólio | 67–78 |
+| 0 | Terminal, Linux e Git (semanas 1–6) | em andamento |
+| A | IA aplicada: API de LLM, ferramentas, agentes, RAG, avaliação | próxima |
+| B | TypeScript e Node.js | |
+| C | SQL e PostgreSQL | |
+| D | DevOps enxuto: Docker e GitHub Actions | |
+| E | Testes automatizados | |
+| 1–6 | Trilha HPC (C, C++, OpenMP, MPI, CUDA, HPC para IA) | em espera |
 
-Cada fase usa o que a anterior ensinou, e as duas últimas são onde HPC e IA se juntam. O mini-projeto de multiplicação de matrizes acompanha você do começo ao fim.
+O fio condutor é o `tutor/`: um agente que estuda este repositório e evolui de fase em fase (detalhes em "Ponto de decisão" e no `CLAUDE.md`).
 
 ## Fase 0 · Terminal, Linux e Git (semanas 1 a 6)
 
-Objetivo: ficar à vontade no terminal do Linux. Todo cluster de HPC roda Linux, e você vai usá-lo só pela linha de comando.
-
-Antes de começar: se usa Windows, instale o WSL com Ubuntu. Assim você tem um Linux de verdade sem trocar de sistema.
+Objetivo: ficar à vontade no terminal do Linux. Todo servidor, container e pipeline de CI roda Linux, e boa parte do trabalho com eles é pela linha de comando.
 
 **Na Alura**
 
@@ -84,9 +81,37 @@ Antes de começar: se usa Windows, instale o WSL com Ubuntu. Assim você tem um 
 
 - [ ] [MIT Missing Semester](https://missing.csail.mit.edu/): as aulas de shell e linha de comando. Grátis, vídeos em inglês no YouTube (ative as legendas).
 
-**Mini-projeto:** crie no GitHub o repositório `hpc-estudos`. Primeiro arquivo: um script Bash que mostra quantos núcleos e quanta memória sua máquina tem (`nproc`, `free -h`).
+**Mini-projeto:** no repositório `estudos-dev-ia` (criado como `hpc-estudos`), Primeiro arquivo: um script Bash que mostra quantos núcleos e quanta memória sua máquina tem (`nproc`, `free -h`).
 
 **Pronto pra avançar quando:** você navega pastas, edita arquivos, usa pipes (`|`) e faz commit e push sem consultar nada.
+
+## Ponto de decisão: o que vem depois da Fase 0 (revisto em 10/11/2026)
+
+A Fase 0 serve a qualquer rumo: terminal, Linux e Git são ferramentas de todo dev. Ela segue como está. As Fases 1 a 6 (C, OpenMP, MPI, CUDA) são o caminho de engenheiro de HPC, e **ficam em espera**: não estão descartadas, mas não são o rumo que escolhi agora.
+
+O plano é da minha **carreira**, não de um emprego: quero ser dos melhores na área em que estudo e opero, que é **desenvolvimento com IA**. O rumo é IA aplicada no centro, com full stack e um DevOps enxuto em volta. A ordem candidata, a confirmar quando a Fase 0 fechar:
+
+| Fase | Tema | Por que, na carreira | Pronto quando |
+| --- | --- | --- | --- |
+| A | IA aplicada: API de LLM, prompt, ferramentas (tool use), agentes, RAG, avaliação | é a área que mais cresce e a que eu quero dominar | construo um agente pequeno que chama uma ferramenta minha e sei medir se ele acerta |
+| B | TypeScript e Node.js | a linguagem mais usada para pôr IA em produto web | escrevo uma API pequena tipada, sem consultar o básico |
+| C | SQL e PostgreSQL | todo sistema guarda dado; modelagem e permissões separam o júnior do sênior | modelo três tabelas, escrevo os joins e explico uma política de acesso |
+| D | DevOps enxuto: Docker e GitHub Actions | quem põe no ar o que construiu entrega sozinho | subo a API da Fase B num container e o CI roda os testes |
+| E | Testes automatizados | código, e IA principalmente, só vale verificado | a API da Fase B tem testes que falham quando eu quebro algo |
+
+A IA vem primeiro porque é o que mais quero, mas as fases A e B podem andar juntas (a A precisa de um pouco de código).
+
+**Carreira da Alura para a Fase A (decidido em 10/11/2026):** [Engenharia de Agentes de IA](https://www.alura.com.br/carreiras/engenharia-de-ia), só o nível Base (Python para IA) e o Nível 1 (agentes com RAG), com o checkpoint do nível. Os Níveis 2 (ML, deep learning) e 3 (MLOps) ficam fora por enquanto. Da [AI-Native Software Engineering](https://www.alura.com.br/carreiras/ai-native-software-engineering), só cursos avulsos (engenharia de contexto, MCP) quando fizer falta. A [Arquitetura de Soluções com IA](https://www.alura.com.br/carreiras/arquitetura-de-solucoes-com-ia) fica para mais tarde, na senioridade. Antes de começar: conferir a ementa curso a curso na Alura (a escolha foi feita só pela página de cada carreira).
+
+**Fio condutor: `tutor/`.** Um agente que lê `contexto/` e `DIARIO.md` e me faz perguntas sobre meus pontos fracos. A: script com ferramenta, RAG e avaliação (% de acerto) → B: API em TypeScript → C: Postgres guardando o histórico → D: Docker e CI rodando a avaliação → E: testes, com a avaliação como regressão. Cada fase fecha com uma tag git; resultados em `tutor/resultados.csv`.
+
+**Na última semana da Fase 0:** reler esta tabela, confirmar a ordem e atualizar o `CLAUDE.md` (fase atual).
+
+---
+
+# Trilha HPC (em espera)
+
+As Fases 1 a 6 abaixo eram o plano original para virar engenheiro de HPC. Ficam guardadas como estavam, caso eu volte a elas.
 
 ## Fase 1 · Linguagem C e como o computador funciona (semanas 7 a 18)
 
@@ -209,7 +234,7 @@ Objetivo: juntar tudo onde o mercado está hoje, que é treinar e servir modelos
 
 **Pronto quando:** você explica como os gradientes são sincronizados entre GPUs (all-reduce) e liga isso ao que aprendeu de MPI.
 
-## Comunidade, eventos e o que vem depois
+## Comunidade de HPC, eventos e o que vem depois (em espera)
 
 A comunidade de HPC no Brasil é pequena, e é nela que aparecem contatos e vagas. Comece a frequentá-la antes de se sentir pronto.
 

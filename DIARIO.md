@@ -1,4 +1,4 @@
-# Diário de estudos HPC
+# Diário de estudos
 
 Formato: `data · fase semana · fiz: ... · dúvida: ...`
 
@@ -7,3 +7,4 @@ Formato: `data · fase semana · fiz: ... · dúvida: ...`
 2026-11-04 · F0 S1 · fiz: aula 1 do curso de Linux (história, distros, boot, interfaces) · dúvida: ordem do boot (corrigida), GPL
 2026-11-04 · F0 S1 · fiz: README público, ritual de fim de sessão, contexto do dia 1 · dúvida: — · próximo: revisar boot + aula 2 digitando no terminal
 2026-11-05 · F0 S1 · fiz: aula 2 de Linux (parcial): man, pwd, ls, find, cp, mv, rm, touch; criei comandos.md · dúvida: ordem do boot (errei de novo), 5 perguntas abertas · próximo: responder as perguntas + terminar aula 2
+2026-11-10 · F0 S1 · fiz: mudança de rumo (HPC em espera → desenvolvimento com IA), plano A–E, carreira Alura (Engenharia de Agentes de IA, Base+N1), fio condutor tutor/, repo renomeado para estudos-dev-ia · dúvida: — · próximo: revisar boot + 5 perguntas abertas + terminar aula 2

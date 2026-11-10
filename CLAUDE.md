@@ -1,19 +1,20 @@
-# CLAUDE.md · hpc-estudos
+# CLAUDE.md · estudos-dev-ia
 
-Este repositório é meu caderno de estudos de HPC (computação de alto desempenho). Leia este arquivo e o `PLANO.md` antes de qualquer coisa.
+Este repositório é meu caderno de estudos: primeiro terminal, Linux e Git (Fase 0), depois **desenvolvimento com IA** (Fases A a E). A trilha de HPC (Fases 1 a 6) fica em espera. Leia este arquivo e o `PLANO.md` antes de qualquer coisa.
 
 ## Quem eu sou e aonde quero chegar
 
 - Sou desenvolvedor e trabalho todo dia com o Claude Code. Não tenho base em C, sistemas ou paralelismo, e não tenho costume de estudar.
-- Objetivo: em 78 semanas, virar um engenheiro de HPC que usa IA como ferramenta e sabe verificar o que ela produz. Não quero IA para tudo, e não quero só copiar código.
+- Objetivo de carreira (revisto em 10/11/2026): ser dos melhores em **desenvolvimento com IA** — IA aplicada no centro, full stack e um DevOps enxuto em volta —, usando IA como ferramenta e sabendo verificar o que ela produz. Não quero IA para tudo, e não quero só copiar código. A trilha de HPC (Fases 1 a 6) fica em espera, sem apagar; a Fase 0 serve aos dois rumos.
 - Ritmo: 4 dias por semana, 1 hora por dia. Cursos na Alura + recursos gratuitos de fora.
-- O plano completo está em `PLANO.md` (7 fases, da Fase 0 à Fase 6).
+- O plano completo está em `PLANO.md`: Fase 0 → Fases A a E (rumo atual). As Fases 1 a 6 (HPC) estão no fim, em espera.
+- Carreira da Alura para a Fase A: **Engenharia de Agentes de IA**, só o nível Base e o Nível 1 (agentes com RAG). Da AI-Native Software Engineering, só cursos avulsos (engenharia de contexto, MCP) quando fizer falta.
 
 ## Onde estou agora
 
 - Fase atual: **0 · Terminal, Linux e Git**
 - Semana: **1**
-- Ambiente: Fedora 44 (Linux nativo, sem WSL) · AMD Ryzen 7 5825U, 8 núcleos / 16 threads, L1d 32 KiB por núcleo, L2 512 KiB por núcleo, L3 16 MiB · 7 GiB de RAM · GPU integrada AMD Radeon (Barcelo), **sem NVIDIA**: CUDA da Fase 5 vai pro Google Colab.
+- Ambiente: Fedora 44 (Linux nativo, sem WSL) · AMD Ryzen 7 5825U, 8 núcleos / 16 threads · 7 GiB de RAM · GPU integrada AMD Radeon (Barcelo), sem NVIDIA.
 
 Eu atualizo estas linhas quando avanço. Se eu esquecer, confira no `DIARIO.md`.
 
@@ -21,10 +22,10 @@ Eu atualizo estas linhas quando avanço. Se eu esquecer, confira no `DIARIO.md`.
 
 1. Responda sempre em português, direto e curto. Cada sessão tem só 1 hora.
 2. **Não entregue a solução** de exercícios ou do mini-projeto da fase atual. Ordem: uma pergunta que me faça pensar → dica → dica mais forte → solução, só se eu pedir "me mostra a solução".
-3. Quando eu errar, explique **por que** errei (memória, cache, sincronização...), não só corrija.
-4. Performance só se afirma com número. Antes de dizer que algo é mais rápido, proponha como medir (`time`, benchmark, profiler).
+3. Quando eu errar, explique **por que** errei, não só corrija.
+4. Só afirme que algo funciona ou é melhor com evidência: teste, medição ou avaliação. Antes de dizer que um prompt ou agente "ficou melhor", proponha como medir.
 5. No fim de um tópico, faça 1 ou 2 perguntas para checar se entendi.
-6. Nas fases 0 e 1, comandos que alteram coisas: explique e deixe eu digitar. **Exceção:** quando eu mandar você fazer (ex.: git, commit, push, mover arquivos), faça. Eu avalio caso a caso: o que é novo pra mim eu faço na mão; o que já faço todo dia no trabalho eu delego.
+6. Na Fase 0 e no começo de cada fase nova, comandos que alteram coisas: explique e deixe eu digitar. **Exceção:** quando eu mandar você fazer (ex.: git, commit, push, mover arquivos), faça. Eu avalio caso a caso: o que é novo pra mim eu faço na mão; o que já faço todo dia no trabalho eu delego.
 7. Nada fora deste repositório sem me perguntar antes.
 
 ## O que você pode fazer em cada fase
@@ -32,38 +33,45 @@ Eu atualizo estas linhas quando avanço. Se eu esquecer, confira no `DIARIO.md`.
 | Fase | Você pode | Eu faço |
 |---|---|---|
 | 0 · Terminal, Linux, Git | Explicar comandos e mensagens de erro; executar o que eu mandar (git eu já domino) | Os comandos de Linux que ainda são novos pra mim |
-| 1 · C | Revisar meu código depois que eu tentei; explicar bugs de memória; sugerir valgrind e sanitizers | Escrever todo o código e compilar com `gcc` na mão |
-| 2 · C++ e performance | Sugerir otimizações depois que eu mostrar a minha; escrever harness de benchmark e Makefile | As otimizações e as medições |
-| 3 · OpenMP | Scripts de benchmark e gráficos de speedup | A paralelização |
-| 4 · MPI e Slurm | Scripts Slurm, Dockerfiles e automação, explicando cada linha | O código MPI e entender cada linha do job |
-| 5 · GPU e CUDA | Escrever variações de kernel para eu comparar | Perfilar com Nsight e explicar qual ganha e por quê |
-| 6 · HPC para IA | Automatizar experimentos de treino distribuído | Desenhar o experimento e validar os resultados |
+| A · IA aplicada | Explicar conceitos; sugerir variações de prompt para eu comparar | Montar o agente e a avaliação, e ler os resultados |
+| B · TypeScript e Node | Revisar meu código depois que eu tentei; explicar o erro do compilador | Escrever o código |
+| C · SQL e Postgres | Explicar o plano da consulta; sugerir índices | Modelar as tabelas e escrever as consultas |
+| D · Docker e Actions | Escrever Dockerfile e workflow, explicando cada linha | Entender cada linha e fazer rodar |
+| E · Testes | Sugerir casos de borda que esqueci | Escrever os testes e ver cada um falhar antes de passar |
+
+As Fases 1 a 6 (HPC) estão em espera. Se eu voltar para elas, a tabela antiga está no histórico do git (commit `437b534`).
 
 Sempre liberado: explicar conceitos, fazer gráficos, formatar README, revisar o diário.
 
-## O fio condutor: `matmul/`
+## O fio condutor: `tutor/`
 
-Uma multiplicação de matrizes que evolui a cada fase: C (Fase 1) → C++ otimizado com cache e tiling (2) → OpenMP (3) → MPI (4) → CUDA e PyTorch (5) → treino distribuído (6). No fim, o README compara todas as versões. É o meu portfólio.
+Um agente que estuda este próprio repositório: lê `contexto/` e `DIARIO.md` e me faz perguntas sobre os meus pontos fracos. Ele evolui a cada fase:
 
-- Cada versão vive na sua pasta: `matmul/c/`, `matmul/cpp/`, `matmul/openmp/`, `matmul/mpi/`, `matmul/cuda/`.
-- Todo resultado vai para `matmul/resultados.csv`, com as colunas `data,versao,fase,n,threads_ou_processos,tempo_s,maquina`.
-- Tamanho padrão para comparar: N = 1000. Outros tamanhos são extras.
-- Nunca altere uma versão antiga para "melhorar": cada pasta é o retrato daquela fase.
+- **A:** script que chama a API de um LLM, com uma ferramenta (`ler_contexto`), RAG sobre `contexto/` e uma avaliação (perguntas com resposta esperada → % de acerto).
+- **B:** vira uma API em TypeScript/Node.
+- **C:** Postgres guarda perguntas, respostas e acertos ao longo do tempo.
+- **D:** Docker e GitHub Actions rodando a avaliação a cada push.
+- **E:** testes, com a avaliação como teste de regressão (o acerto caiu, o CI quebra).
+
+Regras:
+
+- É um produto que evolui no mesmo lugar. Cada fase fecha com uma **tag git** (`fase-a`, `fase-b`…): esse é o retrato daquela fase.
+- Todo resultado de avaliação vai para `tutor/resultados.csv`, com as colunas `data,versao,fase,acertos,total,custo_usd,latencia_s`.
+- A pasta `tutor/` só nasce na Fase A.
 
 ## Estrutura
 
 A estrutura cresce com as fases. Não crie pastas antes da hora.
 
 ```
-hpc-estudos/
+estudos-dev-ia/
 ├── CLAUDE.md
 ├── PLANO.md
 ├── DIARIO.md
 ├── README.md
 ├── contexto/          um arquivo por dia de estudo (AAAA-MM-DD-diaNN.md)
 ├── fase-0-terminal/
-├── fase-1-c/
-└── matmul/
+└── tutor/             (a partir da Fase A)
 ```
 
 ## Ritual de cada sessão
